@@ -281,13 +281,21 @@ document.addEventListener('DOMContentLoaded', function() {
          const director = review.director || '';
          const genres = Array.isArray(review.genre) ? review.genre.join(', ') : '';
          // Use root-relative paths for images assuming 'images' folder is at the root
-         const imageSrc = review.image && review.image.startsWith('/')
-                        ? review.image
-                        : (review.image ? `/images/${review.image}` : '/images/placeholder-poster.jpg'); // Ensure leading slash or use fallback
          const imageAlt = review.imageAlt || `${review.title} (${reviewYear}) Movie Poster`;
          const fullReviewLink = review.fullReviewLink.startsWith('/')
                               ? review.fullReviewLink
                               : `/${review.fullReviewLink}`; // Ensure leading slash for links
+         
+         let imageSrc = '/images/placeholder-poster.jpg'; // Default fallback
+         if (review.image) {
+             // Check if it's an absolute URL (starts with http or https) OR already a root-relative path
+             if (review.image.startsWith('http') || review.image.startsWith('/')) {
+                 imageSrc = review.image; // Use it directly
+             } else {
+                 // Assume it's just a filename and prepend the images folder path
+                 imageSrc = `/images/${review.image}`;
+             }
+         }
 
          card.innerHTML = `
              <a href="${fullReviewLink}" class="card-link-wrapper" aria-label="Read full review for ${review.title}">

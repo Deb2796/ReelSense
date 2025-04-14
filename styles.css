@@ -185,6 +185,30 @@ header .container {
      .main-nav ul li a.nav-link:hover, .main-nav ul li a.nav-link:focus-visible, .main-nav ul li a.nav-link.active { background-color: rgba(var(--secondary-color), 0.2); color: var(--secondary-color); }
     #theme-switcher { margin-top: 0.5rem; }
     .mobile-menu-toggle { display: flex; align-items: center; justify-content: center; }
+    @media (max-width: 768px) {
+        /* ... existing mobile styles ... */
+    
+        .main-nav.active ul li:last-child {
+            /* Target the list item containing the theme switcher */
+            margin-top: 1rem; /* Add some space above the button's list item */
+            padding-bottom: 1rem; /* Add some space below it */
+            /* Remove width: 100% if it's causing issues, let it size naturally */
+            /* width: auto; */
+        }
+    
+        .main-nav.active ul li #theme-switcher {
+             /* Ensure the button itself is centered if needed */
+             margin-left: auto;
+             margin-right: auto;
+             display: block; /* Make it a block element to center with margins */
+             /* Or use flex on the parent li if preferred */
+        }
+    
+        /* You might need to adjust padding on all mobile nav links */
+        /* .main-nav.active ul li a.nav-link { */
+             /* padding: 0.8rem 1rem; /* Example: slightly less padding */
+        /* } */
+    }
 }
 
 /* --- Hero Section & Search --- */
