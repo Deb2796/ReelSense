@@ -149,12 +149,20 @@
                 </header>
 
                 <figure class="review-main-image">
-                    <!-- *** REPLACE with appropriate image URL and alt text for this movie *** -->
-                    <img src="/images/killbillsociety.webp" alt="Killbill Society Poster" loading="eager">
-                     <!-- *** REPLACE with relevant image caption *** -->
+                    <!-- Use the <picture> element -->
+                    <picture>
+                        <!-- Offer the WEBP version first -->
+                        <source srcset="/images/killbillsociety.webp" type="image/webp">
+                
+                        <!-- Offer a JPG version as a fallback (MUST EXIST!) -->
+                        <source srcset="/images/killbillsociety.jpg" type="image/jpeg">
+                
+                        <!-- REQUIRED: Default <img> tag for older browsers or if other sources fail -->
+                        <!-- This img's src should be the most compatible format (usually JPG/PNG) -->
+                        <img src="/images/killbillsociety.jpg" alt="Killbill Society Poster" loading="eager">
+                    </picture>
                     <figcaption>Movie poster image.</figcaption>
                 </figure>
-
                 <!-- NEW container for Meta Info and Rating - MOVED HERE -->
                 <div class="review-meta-and-rating">
                      <!-- *** REPLACE Director, Year, Genres *** -->

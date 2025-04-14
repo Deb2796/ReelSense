@@ -99,7 +99,7 @@
     "rating": 2.5,
     "excerpt": "A dark comedy with flashes of brilliance, let down by uneven pacing and repetitive humor—worth a watch for Parambrata’s performance and the standout soundtrack..",
     "fullReviewLink": "killbillsociety-review.html",
-    "image": "/images/killbillsociety.webp",
+    "image": ["/images/killbillsociety.webp", "/images/killbillsociety.jpeg"],
     "imageAlt": "Killbill Society Poster",
     "publishedDate": "2025-04-15T12:00:00Z"
     }
