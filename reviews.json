@@ -23,7 +23,7 @@
     "fullReviewLink": "parasite-review.html",
     "image": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_FMjpg_UX1000_.jpg",
     "imageAlt": "Parasite movie poster with characters' eyes blacked out",
-     "publishedDate": "2024-01-18T11:00:00Z"
+    "publishedDate": "2024-01-18T11:00:00Z"
   },
   {
     "id": 3,
@@ -36,7 +36,7 @@
     "fullReviewLink": "dune-review.html",
     "image": "https://m.media-amazon.com/images/M/MV5BN2FjNmEyNWMtYzM0ZS00NjIyLTg5YzYtYThlMGVjNzE1OGViXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_FMjpg_UX1000_.jpg",
     "imageAlt": "Dune movie poster featuring main characters in the desert",
-     "publishedDate": "2024-01-20T14:00:00Z"
+    "publishedDate": "2024-01-20T14:00:00Z"
   },
   {
     "id": 4,
@@ -49,7 +49,7 @@
     "fullReviewLink": "eeaao-review.html",
     "image": "https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_FMjpg_UX1000_.jpg",
     "imageAlt": "Everything Everywhere All At Once poster with main character looking fractured",
-     "publishedDate": "2024-01-22T09:00:00Z"
+    "publishedDate": "2024-01-22T09:00:00Z"
   },
   {
     "id": 5,
@@ -64,7 +64,7 @@
     "imageAlt": "Blade Runner 2049 poster with Ryan Gosling in a futuristic city",
     "publishedDate": "2024-01-10T15:00:00Z"
   },
-   {
+  {
     "id": 6,
     "title": "Mad Max: Fury Road",
     "director": "George Miller",
@@ -77,7 +77,7 @@
     "imageAlt": "Mad Max: Fury Road poster showing characters on a war rig",
     "publishedDate": "2024-01-12T12:30:00Z"
   },
-   {
+  {
     "id": 7,
     "title": "Oppenheimer",
     "director": "Christopher Nolan",
@@ -90,17 +90,17 @@
     "imageAlt": "Oppenheimer movie poster with a mushroom cloud",
     "publishedDate": "2024-01-12T12:30:00Z"
   },
-    {
-      "id": 8,
+  {
+    "id": 8,
     "title": "Killbill Society",
     "director": "Srijit Mukherji",
     "year": 2025,
     "genre": ["Thriller", "Drama"],
     "rating": 2.5,
-    "excerpt": "A dark comedy with flashes of brilliance, let down by uneven pacing and repetitive humor—worth a watch for Parambrata’s performance and the standout soundtrack..",
+    "excerpt": "A dark comedy with flashes of brilliance, let down by uneven pacing and repetitive humor—worth a watch for Parambrata’s performance and the standout soundtrack.",
     "fullReviewLink": "killbillsociety-review.html",
-    "image": "/images/killbillsociety.webp", 
+    "image": "/images/killbillsociety.webp",
     "imageAlt": "Killbill Society Poster",
     "publishedDate": "2025-04-15T12:00:00Z"
-    }
+  }
 ]
