@@ -1,0 +1,88 @@
+Okay, here is the step-by-step process to add a completely new movie review to your website, assuming you are doing this manually (without the Node.js script).
+Let's say you want to add a review for "Barbie (2023)".
+Step 1: Prepare the Data (Edit reviews.json)
+Open your reviews.json file in your text editor.
+Go to the end of the list, just before the closing ] bracket.
+Add a comma , after the last existing movie object (the one ending with }).
+Add a new JSON object for Barbie. Make sure to give it a unique id (if the last one was 6, use 7). Fill in all the details accurately. Pay close attention to the publishedDate format (use YYYY-MM-DDTHH:MM:SSZ) and make sure the fullReviewLink filename is what you intend to use for the HTML file.
+// Example: Adding Barbie after Mad Max (id 6)
+[
+  { /* ... Interstellar data ... */ },
+  { /* ... Parasite data ... */ },
+  { /* ... Dune data ... */ },
+  { /* ... EEAAO data ... */ },
+  { /* ... Blade Runner 2049 data ... */ },
+  {
+    "id": 6,
+    "title": "Mad Max: Fury Road",
+    // ... other Mad Max data ...
+    "publishedDate": "2024-01-12T12:30:00Z"
+  }, // <-- Add comma here
+  { // <-- Start new object for Barbie
+    "id": 7, // <-- Unique ID
+    "title": "Barbie",
+    "director": "Greta Gerwig",
+    "year": 2023,
+    "genre": ["Comedy", "Adventure", "Fantasy"],
+    "rating": 4.2, // <-- Your rating
+    "excerpt": "Greta Gerwig's vibrant and surprisingly clever take on the iconic doll, exploring themes of feminism, existentialism, and patriarchy.",
+    "fullReviewLink": "barbie-review.html", // <-- The HTML filename you will create
+    "image": "https://m.media-amazon.com/images/M/MV5BNjU3N2QxNzYtMjk1NC00MTc4LTk1NTQtMmUxNTljM2I0NDA5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_FMjpg_UX1000_.jpg", // <-- Find a good image URL
+    "imageAlt": "Barbie movie poster featuring Margot Robbie and Ryan Gosling", // <-- Descriptive alt text
+    "publishedDate": "2024-01-26T10:00:00Z" // <-- Today's date/time (or desired publish date) in ISO format
+    // "imageCaption": "Optional: Add a specific caption for the main image"
+  } // <-- No comma after the very last object
+]
+Use code with caution.
+Json
+Save the reviews.json file.
+Step 2: Create the New HTML File
+Open your [movie-slug]-review.html template file in your text editor.
+Immediately go to File -> Save As....
+Save the file with the exact name you specified in fullReviewLink in Step 1: barbie-review.html. Save it in your main project folder alongside your other review files.
+You are now editing the new barbie-review.html file.
+Step 3: Replace Placeholders in barbie-review.html
+Carefully go through barbie-review.html and replace all placeholders using the Barbie data from reviews.json:
+[Movie Title] -> Barbie
+[Year] -> 2023
+[movie-specific description] -> Write a brief description for the meta tag (e.g., ReelSense reviews Greta Gerwig's Barbie (2023), analyzing its vibrant visuals, humor, and surprising depth.)
+[movie-slug] -> barbie (from the filename)
+YOUR_ABSOLUTE_URL -> https://reelsense.netlify.app (if you haven't already)
+YYYY-MM-DDTHH:MM:SSZ -> 2024-01-26T10:00:00Z (Barbie's publishedDate)
+Genre1, Genre2, Director Name, Year, Keyword1, Keyword2 -> Comedy, Adventure, Fantasy, Greta Gerwig, 2023, Mattel, Margot Robbie (Combine genre, director, year, add keywords)
+GA_MEASUREMENT_ID -> Your actual GA ID (e.g., G-XXXXXXXXXX)
+[Optional: URL to IMDB/Wikipedia page] -> Add the IMDB link for Barbie, or remove the sameAs line in the schema.
+[Director Name] -> Greta Gerwig
+[Specific Review Headline] -> Write a specific headline for the schema (e.g., Barbie Review: More Than Just Plastic Perfection)
+[Numeric Rating] -> 4.2 (Update schema, data-rating, and the text span)
+[First paragraph or summary of the review text...] -> Paste the Barbie excerpt from reviews.json.
+[IMAGE_URL] -> Paste the Barbie image URL from reviews.json.
+[Descriptive Alt Text for Image] -> Paste the Barbie imageAlt from reviews.json.
+[Relevant caption for the image.] -> Write a caption (e.g., Life in plastic, it's fantastic? Barbie explores the question.) or use the imageCaption from JSON if you added it.
+Genre1, Genre2, ... -> Comedy, Adventure, Fantasy (Join the genre array)
+Step 4: Add the Full Review Content
+Scroll down to the <div class="review-body"> section in barbie-review.html.
+Delete the placeholder <h2> headings and <p> tags (e.g., <h2>[Subheading...]</h2>, <p>Start your review here...</p>).
+Write or paste your complete review for Barbie into this section. Use <p> tags for paragraphs, <h2> for subheadings, <blockquote> for quotes, etc.
+Update the detailed rating breakdown <ul> at the end of the review body with your specific scores for Barbie (Direction, Story, Visuals, Acting, Overall). Make sure the Overall score matches the 4.2 used elsewhere.
+Step 5: Prepare and Place Images
+Main Image: You already linked this in Step 3 using the URL from reviews.json.
+Open Graph Image: Create or find an image specifically for social media sharing (ideally 1200x630 pixels). Name it og-barbie.jpg. Place this file inside your project's /images/ folder.
+Twitter Card Image: You can often reuse the Open Graph image or create a slightly different one (e.g., square). Name it twitter-barbie.jpg. Place this file inside your project's /images/ folder.
+Check Case Sensitivity: Make sure the filenames (og-barbie.jpg, twitter-barbie.jpg) exactly match what you used in the meta tags (which should be based on the [movie-slug] replacement).
+Step 6: Verify Locally
+Save barbie-review.html.
+Open barbie-review.html in your web browser from your computer.
+Check: Does the title, heading, image, caption, director/year/genre info, rating, and your full review text look correct?
+Step 7: Deploy
+Upload the following files to Netlify (or wherever you host your site):
+The updated reviews.json file.
+The new barbie-review.html file.
+The new og-barbie.jpg and twitter-barbie.jpg files (placed within the images folder).
+Step 8: Final Live Check
+Visit https://reelsense.netlify.app/barbie-review.html on your live site.
+Verify everything looks correct.
+Visit https://reelsense.netlify.app/all-reviews.html. Barbie should now appear in the list (likely at the top, because of the publishedDate).
+Visit https://reelsense.netlify.app/. If Barbie is one of the 3 most recent reviews based on publishedDate, it should appear on the homepage.
+Note: Sometimes you might need to do a hard refresh (Ctrl+Shift+R or Cmd+Shift+R) on the live site to see the changes due to browser or server caching.
+You have now successfully added a new review! Repeat this entire process for each subsequent review.
